@@ -1,6 +1,6 @@
 {
   "name": "@jedmud/tui-timer-element",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Jedmud TUI timer element module.",
   "main": "src/index.js",
   "scripts": {

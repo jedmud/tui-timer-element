@@ -23,14 +23,16 @@ module.exports = class extends Type {
             clearInterval(this.timer)
         }
 
-        this.timer = countdown(new Date, t => {
-            const s = this.seconds - t.seconds
+        if (this.seconds > 0) {
+            this.timer = countdown(new Date, t => {
+                const s = this.seconds - t.seconds
 
-            this.print([pad(this.pad, s)[this.fg]])
+                this.print([pad(this.pad, s)[this.fg]])
 
-            if (s === 0) {
-                clearInterval(this.timer)
-            }
-        }, countdown.SECONDS)
+                if (s === 0) {
+                    clearInterval(this.timer)
+                }
+            }, countdown.SECONDS)
+        }
     }
 }
